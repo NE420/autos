@@ -1,0 +1,17 @@
+{% extends "base_bootstrap.html" %}
+
+{% block content %}
+
+<meta name="dj4e" content="426165c5fae9789210ca65f8eea30cf5">
+
+<h1>Delete Make</h1>
+
+<p>Are you sure you want to delete the make: {{ make }}?</p>
+
+<form action="" method="POST">
+  {% csrf_token %}
+  <input type="submit" value="Yes, delete.">
+  <input type="submit" onclick="window.location='{% url 'autos:all' %}' ; return false;" value="Cancel">
+</form>
+
+{% endblock %}
